@@ -1,0 +1,74 @@
+<mat-toolbar>
+    <mat-form-field style="width: 100%" floatLabel="never" appearance="standard">
+
+        <mat-icon matPrefix inline>search</mat-icon>
+        <input matInput placeholder="Filter by teacher">
+    </mat-form-field>
+</mat-toolbar>
+<div style="padding:36px;">
+    <h2 class="mat-headline">Algebra 1</h2>
+    <mat-form-field style="width: 100%">
+        <mat-chip-list #chipList aria-label="Fruit selection">
+            <mat-chip *ngFor="let filter of filters" [selectable]="true"
+                      [removable]="true">
+                {{filter}}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="Filter students..."
+                   [matChipInputFor]="chipList"
+            >
+        </mat-chip-list>
+    </mat-form-field>
+
+    <div
+            fxLayout="column"
+            fxLayout.gt-sm="row wrap"
+            fxLayoutAlign="start">
+        <mat-card>
+            <mat-card-title>Ernest Hemingway</mat-card-title>
+            <mat-card-subtitle>an American journalist, novelist, short-story writer</mat-card-subtitle>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item>3 lessons submitted</mat-list-item>
+                    <mat-list-item>Ungraded</mat-list-item>
+                    <mat-list-item>Needs assign</mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>Don Quihote</mat-card-title>
+            <mat-card-subtitle>The Ingenious Gentleman Don Quixote of La Mancha</mat-card-subtitle>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item disabled> No lessons submitted</mat-list-item>
+                    <mat-list-item>Needs assign</mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>Nick Tesla</mat-card-title>
+            <mat-card-subtitle>inventor, electrical engineer, mechanical engineer</mat-card-subtitle>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item>3 lessons submitted</mat-list-item>
+                    <mat-list-item>Ungraded</mat-list-item>
+                    <mat-list-item>Needs assign</mat-list-item>
+                    <mat-list-item>Has Unrealised grades</mat-list-item>
+                </mat-list>
+
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>Steve Bushemi</mat-card-title>
+            <mat-card-subtitle> actor, director, writer, producer and former firefighter</mat-card-subtitle>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item>3 lessons submitted</mat-list-item>
+                    <mat-list-item>Ungraded</mat-list-item>
+                    <mat-list-item>Needs assign</mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>

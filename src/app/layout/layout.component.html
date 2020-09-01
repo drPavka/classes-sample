@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutGap="24px">
+    <mat-icon>face</mat-icon>
+    <h1>E-learning dashboard</h1>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav-content>
+        <div class="sidenav-content-container" fxLayout="column">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+    <mat-sidenav
+            position="end"
+            #sidenav
+            [mode]="'side'"
+            [opened]="true"
+            class="sidenav-container"
+    >
+        <router-outlet name="menu"></router-outlet>
+    </mat-sidenav>
+</mat-sidenav-container>
